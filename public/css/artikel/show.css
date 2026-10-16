@@ -1,0 +1,16 @@
+.artikel-detail {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .artikel-detail-image {
+            width: 100%;
+            max-height: 460px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        .artikel-isi {
+            line-height: 1.9;
+            overflow-wrap: anywhere;
+        }

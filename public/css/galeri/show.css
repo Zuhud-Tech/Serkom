@@ -1,0 +1,16 @@
+.galeri-detail {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .galeri-detail-image {
+            width: 100%;
+            max-height: 460px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        .galeri-isi {
+            line-height: 1.9;
+            overflow-wrap: anywhere;
+        }

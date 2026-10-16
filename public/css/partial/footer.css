@@ -1,0 +1,111 @@
+
+.site-footer {
+    position: relative;
+    overflow: hidden;
+    background: #111827 !important;
+}
+
+.footer-brand h4 {
+    font-size: 1.35rem;
+    line-height: 1.5;
+}
+
+.footer-description {
+    max-width: 360px;
+    line-height: 1.9;
+    font-size: 0.95rem;
+}
+
+.footer-heading {
+    font-size: 1.05rem;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.footer-heading::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 38px;
+    height: 3px;
+    background: #0d6efd;
+    border-radius: 10px;
+}
+
+.footer-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.footer-menu a {
+    color: rgba(255, 255, 255, 0.65);
+    text-decoration: none;
+    font-size: 0.93rem;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+.footer-menu a:hover {
+    color: #ffffff;
+    padding-left: 5px;
+}
+
+.footer-social .social-link {
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 1.15rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-social .social-link:hover {
+    background: #0d6efd;
+    border-color: #0d6efd;
+    transform: translateY(-4px);
+    color: #ffffff;
+}
+
+.footer-map {
+    width: 100%;
+    height: 190px;
+    background: #1f2937;
+}
+
+.footer-map iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.footer-divider {
+    border-color: rgba(255, 255, 255, 0.15);
+    opacity: 1;
+}
+
+/* Responsif HP */
+@media (max-width: 575.98px) {
+    .site-footer .container {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    .footer-description {
+        max-width: 100%;
+    }
+
+    .footer-heading {
+        margin-bottom: 20px !important;
+    }
+
+    .footer-map {
+        height: 220px;
+    }
+}

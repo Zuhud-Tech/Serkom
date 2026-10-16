@@ -1,0 +1,24 @@
+.star-rating {
+                display: flex;
+                gap: 0.35rem;
+                font-size: 2rem;
+                line-height: 1;
+            }
+
+            .star-rating .star-btn {
+                background: none;
+                border: none;
+                padding: 0;
+                color: #d0d5dd;
+                cursor: pointer;
+                transition: color 0.15s ease, transform 0.15s ease;
+            }
+
+            .star-rating .star-btn:hover,
+            .star-rating .star-btn.is-active {
+                color: #f5a524;
+            }
+
+            .star-rating .star-btn:hover {
+                transform: scale(1.1);
+            }

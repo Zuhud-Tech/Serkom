@@ -1,0 +1,79 @@
+
+
+.service-card {
+    background: #fff;
+    border: 1px solid #e9edf3;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform .3s ease,
+                border-color .3s ease,
+                box-shadow .3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+    border-color: #b9d4ff;
+    box-shadow: 0 18px 40px rgba(30, 64, 175, .10);
+}
+
+.service-icon {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2563eb;
+    background: #eff6ff;
+    border-radius: 18px;
+    transition: background .3s ease,
+                transform .3s ease;
+}
+
+.service-card:hover .service-icon {
+    background: #dbeafe;
+    transform: scale(1.08);
+}
+
+.service-svg {
+    width: 32px;
+    height: 32px;
+}
+
+.service-description {
+    line-height: 1.8;
+    white-space: pre-line;
+}
+
+.service-card h4,
+.service-card h5 {
+    transition: color .3s ease;
+}
+
+.service-card:hover h4,
+.service-card:hover h5 {
+    color: #2563eb;
+}
+
+.service-card a {
+    transition: color .3s ease;
+}
+
+.service-card a:hover {
+    color: #1d4ed8 !important;
+}
+
+/* Aksesibilitas animasi */
+@media (prefers-reduced-motion: reduce) {
+    .service-card,
+    .service-icon,
+    .service-card h4,
+    .service-card h5,
+    .service-card a {
+        transition: none;
+    }
+
+    .service-card:hover,
+    .service-card:hover .service-icon {
+        transform: none;
+    }
+}
