@@ -421,7 +421,7 @@
 
                                     {{-- Deskripsi layanan --}}
                                     <p class="text-secondary lh-lg mb-4">
-                                        {{ $layanan->deskripsi }}
+                                        {{ Str::limit($layanan->deskripsi, 80, '...') }}
                                     </p>
 
                                     <a href="{{ url('https://api.whatsapp.com/send/?phone=628212262442') }}"

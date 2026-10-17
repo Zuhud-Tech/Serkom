@@ -87,7 +87,7 @@ class GaleriResource extends Resource
 
                 TextColumn::make('deskripsi')
                     ->label('Deskripsi')
-                    ->limit(80),
+                    ->limit(50),
 
                 TextColumn::make('tanggal')
                     ->label('Tanggal')
@@ -95,7 +95,8 @@ class GaleriResource extends Resource
                     ->sortable(),
             ])
             ->actions([
-                EditAction::make(),
+                EditAction::make()
+                    ->color('warning'),
                 DeleteAction::make(),
             ])
             ->emptyStateHeading('Belum ada galeri')

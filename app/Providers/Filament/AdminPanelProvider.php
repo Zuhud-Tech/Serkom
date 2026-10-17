@@ -19,6 +19,7 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 
+
 class AdminPanelProvider extends PanelProvider
 {
     public function panel(Panel $panel): Panel
@@ -32,6 +33,7 @@ class AdminPanelProvider extends PanelProvider
             ->globalSearch(false)
             ->brandName('PT Solusi Koneksi Anda')
             ->brandLogoHeight('100px')
+            ->favicon(asset('img/logo.ico'))
             ->colors([
                 'primary' => \Filament\Support\Colors\Color::Blue,
             ])

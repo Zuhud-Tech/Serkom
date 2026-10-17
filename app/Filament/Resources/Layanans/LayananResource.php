@@ -51,7 +51,7 @@ class LayananResource extends Resource
                     ->label('Deskripsi Layanan')
                     ->required()
                     ->rows(4),
-
+                    
                 Select::make('icon')
                     ->label('Pilih Ikon Layanan')
                     ->options(config('layanan-icons'))
@@ -89,6 +89,10 @@ class LayananResource extends Resource
                     ->searchable()
                     ->sortable(),
 
+                TextColumn::make('deskripsi')
+                    ->label('Deskripsi Layanan')
+                    ->limit(50),
+
                 TextColumn::make('icon')
                     ->label('Kode Ikon')
                     ->searchable(),
@@ -98,7 +102,8 @@ class LayananResource extends Resource
                     ->boolean(),
             ])
             ->recordActions([
-                EditAction::make(),
+                EditAction::make()
+                    ->color('warning'),
                 DeleteAction::make(),
             ])
             ->emptyStateHeading('Belum ada layanan')

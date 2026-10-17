@@ -86,7 +86,7 @@ class ArtikelResource extends Resource
 
                 TextColumn::make('deskripsi')
                     ->label('Deskripsi')
-                    ->limit(80),
+                    ->limit(50),
 
                 TextColumn::make('tanggal')
                     ->label('Tanggal')
@@ -94,7 +94,8 @@ class ArtikelResource extends Resource
                     ->sortable(),
             ])
             ->actions([
-                EditAction::make(),
+                EditAction::make()
+                    ->color('warning'),
                 DeleteAction::make(),
             ])
             ->emptyStateHeading('Belum ada artikel')
