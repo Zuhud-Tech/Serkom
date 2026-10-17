@@ -69,8 +69,9 @@
             </div>
 
             
+            
             {{-- Lokasi --}}
-            <div class="col-12 col-lg-4" style="margin-left: 220px;">
+            <div class="col-12 col-md-6 col-lg-5 footer-location">
                 <h5 class="fw-bold mb-4 footer-heading">
                     <i class="bi bi-geo-alt-fill text-primary me-2"></i>
                     Lokasi Kami
@@ -79,13 +80,14 @@
                 <div class="footer-map rounded-4 overflow-hidden">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.7192972196001!2d106.80693912039125!3d-6.583500043269953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c42e085514db%3A0xc0e7670544320099!2sJl.%20Raya%20Pajajaran%20No.88f%2C%20RT.01%2FRW.07%2C%20Bantarjati%2C%20Kec.%20Bogor%20Utara%2C%20Kota%20Bogor%2C%20Jawa%20Barat%2016153!5e0!3m2!1sid!2sid!4v1792029869350!5m2!1sid!2sid"
-                        title="Lokasi SMK Negeri 4 Bogor"
+                        title="Lokasi Kami"
                         loading="lazy"
                         referrerpolicy="strict-origin-when-cross-origin"
                         allowfullscreen>
                     </iframe>
                 </div>
             </div>
+
 
         </div>
 

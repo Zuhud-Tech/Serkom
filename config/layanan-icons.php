@@ -4,7 +4,7 @@
 return [
     'heroicon-o-code-bracket' => 'Pembuatan Website',
     'heroicon-o-device-phone-mobile' => 'Aplikasi Mobile',
-    'heroicon-o-wrench-screwdriver' => 'Maintenance',
+    'heroicon-o-bug-ant' => 'Maintenance',
     'heroicon-o-paint-brush' => 'Desain UI/UX',
     'heroicon-o-cloud' => 'Cloud Computing',
     'heroicon-o-shield-check' => 'Keamanan Website',

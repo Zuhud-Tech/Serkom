@@ -1,9 +1,10 @@
 <?php
-
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Models\Layanan;
 use App\Models\Artikel;
 use App\Models\Galeri;
+use App\Models\Penilaian;
 
 Route::get('/', function () {return view('home');});
 
@@ -18,14 +19,18 @@ Route::view('/galeri', 'galeri.index')->name('galeri');
 Route::view('/galeri/{id}', 'galeri.show')->name('galeri.show');
 
 Route::post('/penilaian', function (Request $request) {
-    $data = $request->validate([
-        'nama' => ['required', 'string', 'max:255'],
-        'rating' => ['required', 'integer', 'min:1', 'max:5'],
-        'komentar' => ['required', 'string', 'max:2000'],
+    $request->validate([
+        'nama' => 'required|string|max:100',
+        'rating' => 'required|integer|min:1|max:5',
+        'komentar' => 'required|string|max:1000',
     ]);
 
-    Penilaian::create($data);
+    Penilaian::create([
+        'nama' => $request->nama,
+        'rating' => $request->rating,
+        'komentar' => $request->komentar,
+    ]);
 
-    return redirect('/#penilaian')
+    return redirect(url('/').'#penilaian')
         ->with('success', 'Penilaian berhasil dikirim!');
 })->name('penilaian.store');

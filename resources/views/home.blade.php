@@ -19,6 +19,7 @@
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
         >
 
+        <link rel="shortcut icon" href="{{ asset('img/logo.ico') }}">
         <link rel="stylesheet" href="{{ asset('css/artikel/artikel.css') }}">
         <link rel="stylesheet" href="{{ asset('css/galeri/galeri.css') }}">
         <link rel="stylesheet" href="{{ asset('css/layanan/layanan.css') }}">
@@ -35,7 +36,7 @@
             <!-- hero -->
             <div class="text-white text-center d-flex align-items-center justify-content-center min-vh-100" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('{{ asset('img/banner.jpg') }}'); background-size: cover; background-position: center;">
                 <div class="container">
-                    <h1 class="display-4 fw-bold mb-4 hero-title">Wujudkan Ide Anda Menjadi Website Profesional.</h1>
+                    <h1 class="display-4 fw-bold mb-4 hero-title">Wujudkan Ide Anda Menjadi Website<br>Profesional</h1>
                     <p class="lead mb-4 hero-subtitle">PT Solusi Koneksi Anda hadir sebagai mitra digital yang menyediakan jasa pembuatan website modern, responsif, dan fungsional untuk membantu bisnis maupun instansi berkembang di era digital.</p>
                     
                 </div>
@@ -396,7 +397,7 @@
 
                     <div class="row g-4">
 
-                        @forelse (\App\Models\Layanan::whereIn('id', [2, 3, 7])->where('aktif', true)->get() as $layanan)
+                        @forelse (\App\Models\Layanan::whereIn('id', [4, 5, 7])->where('aktif', true)->get() as $layanan)
                             <div class="col-md-6 col-lg-4">
                                 <div class="service-card h-100 p-3">
 
@@ -667,11 +668,11 @@
             </section>
 
 
-            <!-- Penilaian -->
+            <!-- penilaian -->
             @php
-            use App\Models\Penilaian;
+                use App\Models\Penilaian;
 
-            $penilaians = Penilaian::latest()->take(6)->get();
+                $penilaians = Penilaian::latest()->take(6)->get();
             @endphp
 
             <section id="penilaian" class="py-5" style="background-color: #ffffff;">
@@ -727,7 +728,7 @@
                                                 Rating
                                             </label>
 
-                                            <input type="hidden" name="rating" id="rating-input" value="{{ old('rating') }}" required>
+                                            <input type="hidden" name="rating" id="rating-input" value="{{ old('rating') }}">
 
                                             <div class="star-rating" id="star-rating" role="radiogroup" aria-label="Pilih rating">
                                                 @for ($i = 1; $i <= 5; $i++)
@@ -803,6 +804,22 @@
 
                 </div>
             </section>
+
+            <div class="modal fade" id="penilaianModal" tabindex="-1" aria-labelledby="penilaianModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content border-0 rounded-4">
+                        <div class="modal-header border-0 pb-0">
+                            <h5 class="modal-title fw-bold" id="penilaianModalLabel"></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body pt-2">
+                            <div class="text-warning mb-2" id="penilaianModalRating"></div>
+                            <p class="mb-3" id="penilaianModalKomentar"></p>
+                            <small class="text-muted" id="penilaianModalTanggal"></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
         
 
 
@@ -819,5 +836,6 @@
             integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
             crossorigin="anonymous"
         ></script>
+        <script src="{{ asset('js/penilaian.js') }}"></script>
     </body>
 </html>

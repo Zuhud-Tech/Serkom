@@ -78,6 +78,12 @@ class LayananResource extends Resource
     {
         return $table
             ->columns([
+
+                TextColumn::make('id')
+                    ->label('ID')
+                    ->searchable()
+                    ->sortable(),
+
                 TextColumn::make('nama')
                     ->label('Nama Layanan')
                     ->searchable()
